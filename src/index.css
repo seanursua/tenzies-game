@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0b2434;
+  font-family: "Karla", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f5f5f5;
+  max-width: 800px;
+  min-height: 500px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.dice-container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.main-title,
+.main-rules {
+  font-family: "Karla";
+}
+
+.main-title {
+  font-size: 2.5rem;
+}
+
+.main-rules {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.dice:focus {
+  outline: none;
+}
+
+.dice:active {
+  box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.dice-num {
+  font-size: 1.8rem;
+}
+
+.roll-dice {
+  width: 150px;
+  height: 45px;
+  border-radius: 4px;
+  background-color: #5030ff;
+  border: none;
+  color: #ffffff;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.roll-dice:focus {
+  outline: none;
+}
+
+.roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 682px) {
+  .dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(3, 1fr);
+    gap: 30px;
+  }
+}
